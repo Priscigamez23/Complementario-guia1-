@@ -14,14 +14,15 @@ body {
     color: #2f2f2f;
 }
 
-/* HERO */
+/* ===== HERO (BANNER PEQUEÑO) ===== */
 .hero {
     background: radial-gradient(circle at top, #81c784, #2e7d32);
-    height: 55vh;
+    color: white;
+    padding: 25px 20px;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: white;
+    border-bottom: 4px solid #a5d6a7;
 }
 
 .hero-texto {
@@ -29,20 +30,21 @@ body {
 }
 
 .hero h1 {
-    font-size: 3.5rem;
-    letter-spacing: 2px;
+    font-size: 2.2rem;
+    letter-spacing: 1px;
 }
 
 .hero p {
-    margin-top: 10px;
-    font-size: 1.2rem;
+    margin-top: 6px;
+    font-size: 1rem;
 }
 
-/* NAV */
+/* ===== NAV ===== */
 nav {
     background-color: #1b5e20;
     position: sticky;
     top: 0;
+    z-index: 10;
 }
 
 nav ul {
@@ -53,7 +55,7 @@ nav ul {
 }
 
 nav li {
-    margin: 15px 20px;
+    margin: 12px 18px;
 }
 
 nav a {
@@ -66,9 +68,9 @@ nav a:hover {
     color: #c8e6c9;
 }
 
-/* BLOQUES */
+/* ===== BLOQUES ===== */
 .bloque {
-    padding: 70px 20px;
+    padding: 60px 20px;
     max-width: 1100px;
     margin: auto;
 }
@@ -76,17 +78,17 @@ nav a:hover {
 .bloque h2 {
     text-align: center;
     color: #2e7d32;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
     font-size: 2rem;
 }
 
-/* BLOQUE VERDE */
+/* ===== BLOQUE VERDE ===== */
 .verde {
     background-color: #e8f5e9;
     border-radius: 20px;
 }
 
-/* CONTENIDO */
+/* ===== CONTENIDO ===== */
 .bloque-contenido {
     display: flex;
     align-items: center;
@@ -99,15 +101,16 @@ nav a:hover {
     box-shadow: 0 10px 25px rgba(0,0,0,0.15);
 }
 
-/* TEXTO */
+/* ===== TEXTO ===== */
 .texto-centro {
     text-align: center;
     max-width: 700px;
     margin: auto;
     font-size: 1.05rem;
+    line-height: 1.6;
 }
 
-/* CARDS */
+/* ===== CARDS ===== */
 .cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -128,21 +131,22 @@ nav a:hover {
     transform: translateY(-8px);
 }
 
-/* TARGET */
+/* ===== EFECTO AL NAVEGAR ===== */
 .bloque:target {
     outline: 4px solid #66bb6a;
 }
 
-/* FOOTER */
+/* ===== FOOTER ===== */
 footer {
     background-color: #1b5e20;
     color: white;
     text-align: center;
     padding: 20px;
     margin-top: 40px;
+    font-size: 0.9rem;
 }
 
-/* RESPONSIVE */
+/* ===== RESPONSIVE ===== */
 @media (max-width: 768px) {
 
     .bloque-contenido {
@@ -151,6 +155,10 @@ footer {
     }
 
     .hero h1 {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
+    }
+
+    nav ul {
+        flex-direction: column;
     }
 }
