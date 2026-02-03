@@ -1,0 +1,123 @@
+/* --- Estilos Generales --- */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* --- Encabezado --- */
+header {
+    background: #333;
+    color: #fff;
+    padding-top: 30px;
+    min-height: 70px;
+    border-bottom: #00bcd4 3px solid;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* --- Navegación --- */
+nav {
+    background: #505050;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+nav ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #00bcd4;
+}
+
+/* --- Sección Principal y Perfil --- */
+.main-content {
+    padding: 30px 0;
+    background: #fff;
+    margin-top: 20px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.profile-grid {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.photo-placeholder img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 50%; /* Hace la imagen redonda */
+    border: 5px solid #00bcd4;
+}
+
+.bio {
+    flex: 2; /* El texto ocupa más espacio que la foto */
+}
+
+/* --- Pie de Página --- */
+footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* --- RESPONSIVIDAD (Media Queries) --- */
+/* Esto se activa en pantallas menores a 768px (tablets y celulares) */
+@media (max-width: 768px) {
+    
+    /* Cambiamos el menú horizontal a vertical */
+    nav li {
+        display: block;
+        margin: 10px 0;
+        border-bottom: 1px solid #666;
+        padding-bottom: 5px;
+    }
+
+    /* Apilamos la foto y el texto en una sola columna */
+    .profile-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .photo-placeholder img {
+        max-width: 200px; /* Hacemos la imagen un poco más pequeña en móvil */
+    }
+
+    header h1 {
+        font-size: 24px; /* Texto más pequeño en móvil */
+    }
+}
